@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Lost and Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>College Lost & Found</h1>
+        <p>Helping students reunite with their belongings</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Report an Item</h2>
+
+            <form id="itemForm">
+                <label for="itemName">Item Name</label>
+                <input id="itemName" required placeholder="e.g. Notebook">
+
+                <label for="itemType">Report Type</label>
+                <select id="itemType">
+                    <option value="Lost">Lost Item</option>
+                    <option value="Found">Found Item</option>
+                </select>
+
+                <label for="category">Category</label>
+                <select id="category">
+                    <option>ID Card</option>
+                    <option>Books</option>
+                    <option>Electronics</option>
+                    <option>Accessories</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="location">Location</label>
+                <input id="location" required placeholder="e.g. Library">
+
+                <label for="itemDate">Date</label>
+                <input type="date" id="itemDate" required>
+
+                <label for="description">Description</label>
+                <textarea id="description" required></textarea>
+
+                <button type="submit">Submit Report</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Reported Items</h2>
+            <input id="searchInput" placeholder="Search items...">
+
+            <p>
+                <button type="button" data-filter="All">All</button>
+                <button type="button" data-filter="Lost">Lost</button>
+                <button type="button" data-filter="Found">Found</button>
+                <button type="button" data-filter="Returned">Returned</button>
+            </p>
+
+            <div id="itemList"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
